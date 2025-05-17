@@ -5,9 +5,9 @@
     require_once (__DIR__ . "/modelo/Pokemon.php");
     
     $dadosPost = array
-    ("
+    (
         
-        nome" => $_POST["nome"],
+        "nome" => $_POST["nome"],
         "numero" => $_POST["numero"],
         "tipo1" => $_POST["tipo1"],
         "tipo2" => $_POST["tipo2"],
@@ -57,30 +57,32 @@
             
         </head>
         
-        <body class='container bg-dark text-light p-5 100vh'>
+        <body class='container bg-dark p-5 100vh'>
             
-            <main class='container text-center align-content-center align-items-center p-5'>
+            <main class='bg-light rounded container text-center align-content-center align-items-center p-5 mb-2'>
                 
                 <h1>Pokemon Cadastrado:</h1>
                 <h2>Nome: " . $pokemon->getNome() . "</h2>
                 
-                <img src=' " . $pokemon->getImgPokemon() . "' alt='Imagem do Pokemon' class='img-fluid border-1 rounded mb-2'>
+                <img src=' " . $pokemon->getImgPokemon() . "' alt='Imagem do Pokemon' class='img-fluid rounded mb-2'>
                 
                 <p>Número: " . $pokemon->getNumero() . "</p>
                 
                 <!-- Tipo -->
-                <div class='d-flex flex-row justify-content-center align-items-center'>
+                <div class='d-flex flex-row justify-content-center align-items-center gap-2 mb-2'>
                     
-                    <div class='d-flex flex-column justify-content-center align-items-center'>
+                    <div class='d-flex flex-column justify-content-center align-items-center ' style='width: 25vh;'>
                         
-                        <img src='" . $pokemon->getImgTipo1() . "' alt='Imagem do Tipo 1' class='img-fluid border-1 rounded mb-2'>
+                        <img src='" . $pokemon->getImgTipo1() . "' alt='Imagem do Tipo 1' class='ratio ratio-1x1 img img-fluid border-1 rounded mb-2'>
+                        
                         <p>Tipo 1:" .  $pokemon->getTipo1() . "</p>
                         
                     </div>
                     
-                    <div class='d-flex flex-column justify-content-center align-items-center'>
+                    <div class='d-flex flex-column justify-content-center align-items-center ' style='width: 25vh;'>
                         
-                        <img src=' " . $pokemon->getImgTipo2() . "' alt='Imagem do Tipo 2' class='img-fluid border-1 rounded mb-2'>
+                        <img src='" . $pokemon->getImgTipo2() . "' alt='Imagem do Tipo 2' class='ratio ratio-1x1 img img-fluid border-1 rounded mb-2'>
+                        
                         <p>Tipo 2: " . $pokemon->getTipo2() . "</p>
                         
                     </div>
@@ -100,7 +102,7 @@
             
             <footer class='container text-center'>
                 
-                <a href='filme_formulario.php' class='btn btn-outline-light'>Voltar</a>
+                <a href='formulario.php' class='btn btn-outline-light'>Voltar</a>
                 
             </footer>
             
